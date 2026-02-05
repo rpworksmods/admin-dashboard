@@ -18,12 +18,6 @@ body {
     grid-template-rows: 0.2fr 0.8fr;
 }
 
-.header {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    background-color: WHITE;
-}
-
 .sidebar {
     grid-column-start: 1;
     grid-row-start: span 2;
@@ -42,12 +36,6 @@ body {
     height:100%;
     gap:10%;
     padding-left:4%;
-}
-
-.content {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    background-color: #E2E8F0;
 }
 
 .branding {
@@ -95,4 +83,134 @@ body {
 
 .sidebar ul li:hover {
     font-weight:700;
+}
+
+.header {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top:1%;
+    padding-bottom:2%;
+}
+
+.header .search {
+    display:grid;
+    grid-template-columns: 0.05fr 1fr;
+    align-items:center;
+    padding-left:5%;
+}
+
+.header .search svg {
+    fill:black;
+    width:60%;
+    height:auto;
+}
+
+.header .search input {
+    width:75%;
+    border-radius:10px;
+    outline:none;
+    border:1px solid #E2E8F0;
+    background-color: #E2E8F0;
+    padding:5px;
+}
+
+.header .user {
+    display:grid;
+    grid-template-columns: 0.2fr 0.2fr 1fr;
+    align-items:center;
+    gap:10%;
+    justify-content:end;
+    padding-right:5%;
+    justify-self:end;
+}
+
+.header .user svg {
+    fill:black;
+    width:50%;
+    height:auto;
+    justify-self:end;
+}
+
+.header .user .user-pic {
+    width:75%;
+    height:auto;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background-color:#E2E8F0;
+    justify-self:end;
+}
+
+.header .user h2 {
+    font-size:100%;
+    font-weight:500;
+    justify-self:start;
+}
+
+.topbar {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.bottombar {
+    grid-column-start: span 1;
+    grid-row-start: 2;
+    display:grid;
+    grid-template-columns: 1fr 5fr 0.75fr 0.75fr 0.75fr;
+    grid-template-rows: 1fr;
+}
+
+.bottombar .user-pic {
+    width:40%;
+    height:auto;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    background-color:#E2E8F0;
+    justify-self:end;
+    align-self:center;
+    margin-right:10%;
+}
+
+.bottombar .user-details {
+    align-self:center;    
+    justify-self:start;
+}
+
+.bottombar .user-details p {
+    font-size:100%;
+    font-weight:500;
+}
+
+.bottombar .user-details h1 {
+    font-size:150%;
+    font-weight:700;
+}
+
+.bottombar button {
+    background-color:#1992D4;
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-size:100%;
+    font-weight:500;
+    cursor:pointer;
+    width:80%;
+    height:50%;
+    align-self:center;
+    justify-self:start;
+}
+
+.content {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: #E2E8F0;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
 }
